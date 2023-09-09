@@ -1,0 +1,19 @@
+<center>
+    <h1><%= @market.name %></h1>
+
+  <div id='market-address'>
+    <p><%= @market.street %></p>
+    <p><%= @market.city %>, <%= @market.state %> <%= @market.zip %></p>
+  </div>
+
+
+</center>
+
+<left>
+  <h3>Vendors at our Market:</h3><br><br>
+<% require 'pry'; binding.pry %>
+
+    <p> link_to <%= vendor.name %>, vendor_path(vendor.id)</p>
+
+
+</left>
