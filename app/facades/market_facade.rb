@@ -17,7 +17,7 @@ class MarketFacade
   end
 
   def self.get_vendor(id)
-    vendor_data = MarketService.get_vendor(id)
+    vendor_data = MarketService.get_vendor(id)[:data]
     Vendor.new(vendor_data)
   end
 

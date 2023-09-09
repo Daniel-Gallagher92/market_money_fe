@@ -25,11 +25,34 @@ RSpec.describe MarketFacade do
       end
 
       it 'returns a single market' do 
-        market = MarketFacade.get_market(322458)
+        market = MarketFacade.get_market(325933)
 
         expect(market).to be_a(Market)
-        expect(market.name).to eq("14&U Farmers' Market")
-        expect(market.street).to eq("1400 U Street NW ")
+        expect(market.id).to eq("325933")
+        expect(market.name).to eq("Henry County Farmers Market")
+        expect(market.street).to eq("100 block of S Main Street")
+        expect(market.city).to eq("New Castle")
+        expect(market.state).to eq("Indiana")
+        expect(market.zip).to eq("47632")
+      end
+
+      it 'returns all vendors for a market' do 
+        vendors = MarketFacade.get_vendors(325933)
+
+        expect(vendors).to be_an(Array)
+        expect(vendors.count).to eq(13)
+      end
+
+      it 'returns a single vendor' do 
+        vendor = MarketFacade.get_vendor(55636)
+
+        expect(vendor).to be_a(Vendor)
+        expect(vendor.id).to eq("55636")
+        expect(vendor.name).to eq("Elevated Elixir")
+        expect(vendor.description).to eq("Elevated kombucha with premium tea and herbs for a refined taste.")
+        expect(vendor.contact_name).to eq("Melida Hane LLD")
+        expect(vendor.contact_phone).to eq("928.894.1161")
+        expect(vendor.credit_accepted).to eq(false)
       end
     end
   end

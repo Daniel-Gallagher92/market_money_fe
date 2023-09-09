@@ -5,7 +5,7 @@ attr_reader :name,
             :contact_name,
             :credit_accepted,
             :id
-            
+
   def initialize(data) 
     @id = data[:id]
     @name = data[:attributes][:name]
