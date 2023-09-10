@@ -17,5 +17,12 @@ RSpec.describe 'Market Show Page' do
       expect(page).to have_content("Indiana")
       expect(page).to have_content("47632")
     end
+
+    expect(page).to have_content("Vendors at our Market:")
+    expect(page).to have_link("Elevated Elixir")
+    expect(page).to have_link("Rocky Mountain Ranch")
+
+    click_link "Elevated Elixir"
+    expect(current_path).to eq("/vendors/55636")
   end
 end

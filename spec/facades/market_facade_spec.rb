@@ -14,8 +14,8 @@ RSpec.describe MarketFacade do
     end
   end
 
-  describe 'instance methods' do
-    describe '#get_markets' do
+  describe 'class methods' do
+    describe '.get_markets' do
       it 'returns all markets' do
         expect(@market_facade).to be_an(Array)
 
@@ -24,7 +24,7 @@ RSpec.describe MarketFacade do
         end
       end
 
-      it 'returns a single market' do 
+      it '.get_market, returns a single market' do 
         market = MarketFacade.get_market(325933)
 
         expect(market).to be_a(Market)
@@ -36,14 +36,14 @@ RSpec.describe MarketFacade do
         expect(market.zip).to eq("47632")
       end
 
-      it 'returns all vendors for a market' do 
+      it '.get_vendors, returns all vendors for a market' do 
         vendors = MarketFacade.get_vendors(325933)
 
         expect(vendors).to be_an(Array)
         expect(vendors.count).to eq(13)
       end
 
-      it 'returns a single vendor' do 
+      it '.get_vendor, returns a single vendor' do 
         vendor = MarketFacade.get_vendor(55636)
 
         expect(vendor).to be_a(Vendor)

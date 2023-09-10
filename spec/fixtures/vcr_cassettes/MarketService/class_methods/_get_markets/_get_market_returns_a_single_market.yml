@@ -1,0 +1,55 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://[::1]:3000/api/v0/markets/325933
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"021ee139c097607c25caa61e240eb835"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - f652d29a-c327-447f-b50f-5adf494ba913
+      X-Runtime:
+      - '0.210430'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.59, sql.active_record;dur=31.91,
+        instantiation.active_record;dur=0.25, process_action.action_controller;dur=174.59
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"325933","type":"market","attributes":{"name":"Henry
+        County Farmers Market","street":"100 block of S Main Street","city":"New Castle","county":"Henry","state":"Indiana","zip":"47632","lat":"39.9705","lon":"-85.355","vendor_count":13},"relationships":{"market_vendors":{"data":[{"id":"422960","type":"market_vendor"},{"id":"422961","type":"market_vendor"},{"id":"422962","type":"market_vendor"},{"id":"422963","type":"market_vendor"},{"id":"422964","type":"market_vendor"},{"id":"422965","type":"market_vendor"},{"id":"422966","type":"market_vendor"},{"id":"422967","type":"market_vendor"},{"id":"422968","type":"market_vendor"},{"id":"422969","type":"market_vendor"},{"id":"422970","type":"market_vendor"},{"id":"422971","type":"market_vendor"},{"id":"422972","type":"market_vendor"}]},"vendors":{"data":[{"id":"55636","type":"vendor"},{"id":"55467","type":"vendor"},{"id":"55918","type":"vendor"},{"id":"55296","type":"vendor"},{"id":"56107","type":"vendor"},{"id":"55811","type":"vendor"},{"id":"55744","type":"vendor"},{"id":"55670","type":"vendor"},{"id":"54969","type":"vendor"},{"id":"56390","type":"vendor"},{"id":"55391","type":"vendor"},{"id":"55257","type":"vendor"},{"id":"55581","type":"vendor"}]}}}}'
+  recorded_at: Sun, 10 Sep 2023 00:08:38 GMT
+recorded_with: VCR 6.2.0

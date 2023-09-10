@@ -1,18 +1,23 @@
-<h1>Markets</h1>
+<center>
+  <h1>Markets</h1>
 
-<table>
-  <tr>
-    <th>Name </th>
-    <th>City </th>
-    <th>State </th>
-  </tr>
+  <table>
+    <thead>
+      <tr>
+        <th scope="col">Name </th>
+        <th scope="col">City </th>
+        <th scope="col">State </th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
 
-  <% @markets.each do |market| %>
-    <tr id="market-<%= market.id%>">
-      <td><%= market.name %></td>
-      <td><%= market.city %></td>
-      <td><%= market.state %></td>
-      <td><%= button_to "More Info", market_path(market.id), method: :get %></td>
-    </tr>
-  <% end %>
-</table>
+    <% @markets.each do |market| %>
+      <tr id="market-<%= market.id%>">
+        <td><%= market.name %></td>
+        <td><%= market.city %></td>
+        <td><%= market.state %></td>
+        <td><%= button_to "More Info", market_path(market.id), method: :get %></td>
+      </tr>
+    <% end %>
+  </table>
+</center>
